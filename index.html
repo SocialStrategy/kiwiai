@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KiwiAI — AI Clarity for New Zealand Business</title>
+<meta name="description" content="KiwiAI helps New Zealand businesses understand and implement AI. Book a free 30-minute chat with Omar and get clarity on what AI can do for your business.">
+<meta name="robots" content="noindex">
+
+<!-- Open Graph -->
+<meta property="og:title" content="KiwiAI — AI Clarity for New Zealand Business">
+<meta property="og:description" content="You don't need more AI hype. You need clarity. Book a free 30-minute chat and find out what AI can actually do for your business.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kiwiai.nz">
+<meta property="og:locale" content="en_NZ">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0e0e0e;
+  --paper:#faf9f6;
+  --paper2:#f3f1ec;
+  --paper3:#ece9e2;
+  --w:#ffffff;
+  --kiwi:#2d7a3a;
+  --kiwi2:#3a9648;
+  --kiwi-pale:#e8f4ea;
+  --kiwi-mid:#b8ddbf;
+  --gold:#c8922a;
+  --gold-pale:#fdf3e3;
+  --mid:#6b6660;
+  --dim:#9b9590;
+  --border:#ddd9d2;
+  --border2:#e8e4dd;
+  --shadow:0 2px 20px rgba(14,14,14,.07);
+  --shadow-md:0 8px 40px rgba(14,14,14,.12);
+  --shadow-lg:0 20px 80px rgba(14,14,14,.16);
+  --r:10px;
+  --r-lg:16px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  overflow-x:hidden;
+}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 4rem;height:68px;
+  background:rgba(250,249,246,.92);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border2);
+  transition:box-shadow .3s;
+}
+nav.scrolled{box-shadow:var(--shadow)}
+.nav-logo{
+  font-family:'Playfair Display',serif;
+  font-size:1.5rem;font-weight:900;letter-spacing:-.02em;color:var(--ink);
+  text-decoration:none;display:flex;align-items:center;gap:.3rem;
+}
+.nav-logo span{color:var(--kiwi)}
+.nav-logo em{font-style:normal;font-size:.55em;font-family:'DM Sans',sans-serif;font-weight:400;color:var(--dim);letter-spacing:.01em;margin-left:.2rem;align-self:flex-end;padding-bottom:.18rem}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--mid);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.btn-nav{
+  background:var(--kiwi);color:var(--w);
+  font-size:.83rem;font-weight:600;
+  padding:.55rem 1.3rem;border-radius:100px;
+  text-decoration:none;transition:background .2s,transform .15s;
+  white-space:nowrap;
+}
+.btn-nav:hover{background:var(--kiwi2);transform:translateY(-1px)}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+  padding:120px 2rem 80px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(45,122,58,.07) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 80% 80%, rgba(200,146,42,.05) 0%, transparent 60%);
+  pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--kiwi-pale);border:1px solid var(--kiwi-mid);
+  color:var(--kiwi);font-size:.75rem;font-weight:600;letter-spacing:.04em;
+  padding:.4rem 1rem;border-radius:100px;margin-bottom:2rem;
+  animation:slideUp .6s both;
+}
+.hero-eyebrow{
+  font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--dim);margin-bottom:1.2rem;
+  animation:slideUp .6s .1s both;
+}
+.hero-h{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(3rem,6.5vw,6rem);
+  font-weight:900;line-height:1.03;letter-spacing:-.03em;
+  color:var(--ink);margin-bottom:1.4rem;
+  animation:slideUp .6s .15s both;
+}
+.hero-h em{font-style:italic;color:var(--kiwi)}
+.hero-sub{
+  font-size:clamp(1rem,1.6vw,1.25rem);
+  line-height:1.75;color:var(--mid);
+  max-width:620px;margin:0 auto 2.5rem;
+  font-weight:400;
+  animation:slideUp .6s .22s both;
+}
+.hero-sub strong{color:var(--ink);font-weight:600}
+.hero-cta{
+  display:flex;align-items:center;gap:1rem;justify-content:center;flex-wrap:wrap;
+  animation:slideUp .6s .3s both;
+}
+.btn-pri{
+  background:var(--kiwi);color:var(--w);
+  font-family:'DM Sans',sans-serif;
+  font-size:.95rem;font-weight:600;
+  padding:.85rem 2rem;border-radius:100px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:background .2s,transform .15s,box-shadow .2s;
+  display:inline-flex;align-items:center;gap:.5rem;
+  white-space:nowrap;
+}
+.btn-pri:hover{background:var(--kiwi2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(45,122,58,.3)}
+.btn-sec{
+  background:transparent;color:var(--ink);
+  font-family:'DM Sans',sans-serif;
+  font-size:.95rem;font-weight:500;
+  padding:.85rem 2rem;border-radius:100px;
+  text-decoration:none;border:1.5px solid var(--border);cursor:pointer;
+  transition:border-color .2s,background .2s,transform .15s;
+  display:inline-flex;align-items:center;gap:.5rem;
+}
+.btn-sec:hover{border-color:var(--ink);background:var(--paper2);transform:translateY(-1px)}
+.hero-trust{
+  margin-top:3.5rem;
+  font-size:.8rem;color:var(--dim);
+  animation:slideUp .6s .4s both;
+  letter-spacing:.01em;
+}
+
+/* ─── SECTIONS ─── */
+.sec{max-width:1100px;margin:0 auto;padding:0 1rem}
+.sec-sm{max-width:780px;margin:0 auto;padding:0 1rem}
+.eyebrow-light{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:1rem}
+.eyebrow-dark{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1rem}
+.sec-h{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,3.8vw,3rem);
+  font-weight:700;line-height:1.15;letter-spacing:-.025em;
+  color:var(--ink);margin-bottom:1.2rem;
+}
+.sec-h em{font-style:italic;color:var(--kiwi)}
+
+/* ─── PROBLEM ─── */
+.problem{padding:7rem 2rem;background:var(--ink);position:relative;overflow:hidden}
+.problem::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 50% 60% at 70% 50%, rgba(45,122,58,.12) 0%, transparent 65%);
+  pointer-events:none;
+}
+.problem-h{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,3.8vw,3.2rem);
+  font-weight:700;line-height:1.15;letter-spacing:-.025em;
+  color:#fff;margin-bottom:1.5rem;
+}
+.problem-h em{font-style:italic;color:var(--kiwi2)}
+.problem-sub{font-size:1rem;line-height:1.75;color:rgba(255,255,255,.55);margin-bottom:3.5rem;max-width:520px}
+.buckets{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;margin-bottom:3rem}
+.bucket{background:#141414;padding:2rem 1.8rem;position:relative}
+.bucket-num{
+  font-family:'Playfair Display',serif;
+  font-size:3rem;font-weight:900;
+  color:rgba(255,255,255,.06);
+  position:absolute;top:1.2rem;right:1.4rem;
+  line-height:1;
+}
+.bucket-icon{font-size:1.6rem;margin-bottom:1rem}
+.bucket-t{font-size:1rem;font-weight:600;color:#fff;line-height:1.4;margin-bottom:.6rem}
+.bucket-d{font-size:.85rem;line-height:1.65;color:rgba(255,255,255,.45)}
+.quote-box{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.1);
+  border-left:3px solid var(--kiwi2);
+  border-radius:var(--r);
+  padding:2rem 2.2rem;
+}
+.quote-text{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.1rem,2vw,1.4rem);
+  font-style:italic;line-height:1.6;
+  color:rgba(255,255,255,.82);margin-bottom:.8rem;
+}
+.quote-attr{font-size:.78rem;color:rgba(255,255,255,.35);letter-spacing:.02em}
+.quote-attr strong{color:var(--kiwi2)}
+
+/* ─── SOLUTION ─── */
+.solution{padding:7rem 2rem;background:var(--paper)}
+.sec-sub{font-size:1rem;line-height:1.75;color:var(--mid);max-width:540px}
+.offer-cards{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
+.offer-card{
+  background:var(--w);
+  border-radius:var(--r-lg);
+  border:1.5px solid var(--border2);
+  padding:2.5rem 2.2rem;
+  transition:box-shadow .2s,transform .2s;
+  position:relative;
+}
+.offer-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.offer-card.primary{border-color:var(--kiwi-mid);background:var(--kiwi-pale)}
+.offer-tag{
+  display:inline-block;
+  font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:.3rem .8rem;border-radius:100px;margin-bottom:1.2rem;
+}
+.offer-tag.free{background:var(--kiwi);color:var(--w)}
+.offer-tag.paid{background:var(--gold-pale);color:var(--gold);border:1px solid rgba(200,146,42,.25)}
+.offer-icon{font-size:2rem;margin-bottom:1rem}
+.offer-t{font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:.5rem;line-height:1.3}
+.offer-price{font-size:1.5rem;font-weight:700;color:var(--kiwi);margin-bottom:.8rem;font-family:'DM Sans',sans-serif}
+.offer-price .price-note{font-size:.8rem;font-weight:400;color:var(--mid)}
+.offer-d{font-size:.87rem;line-height:1.7;color:var(--mid);margin-bottom:1.2rem}
+.offer-list{list-style:none;padding:0;margin:0}
+.offer-list li{
+  font-size:.85rem;line-height:1.6;color:var(--mid);
+  padding:.3rem 0 .3rem 1.4rem;
+  position:relative;
+}
+.offer-list li::before{
+  content:'';position:absolute;left:0;top:.65rem;
+  width:8px;height:8px;border-radius:50%;
+  background:var(--kiwi-mid);border:1.5px solid var(--kiwi);
+}
+.offer-list li strong{color:var(--ink)}
+
+/* ─── INDUSTRIES ─── */
+.industries{padding:7rem 2rem;background:var(--paper2)}
+.ind-h{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.4rem,5vw,4rem);
+  font-weight:900;line-height:1.08;letter-spacing:-.03em;
+  color:var(--ink);margin-bottom:1rem;
+}
+.ind-h em{font-style:italic;color:var(--kiwi)}
+.ind-sub{font-size:1rem;line-height:1.75;color:var(--mid);max-width:580px;margin:0 auto}
+.ind-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.5px;
+  background:var(--border);
+  border-radius:var(--r-lg);
+  overflow:hidden;
+}
+.ind-card{
+  background:var(--paper);
+  padding:1.8rem 1.6rem;
+  transition:background .2s;
+  cursor:default;
+}
+.ind-card:hover{background:var(--kiwi-pale)}
+.ind-card-any{background:var(--kiwi-pale)}
+.ind-card-any:hover{background:var(--kiwi-mid)}
+.ind-icon{font-size:1.6rem;margin-bottom:.9rem;line-height:1}
+.ind-t{font-size:.92rem;font-weight:700;color:var(--ink);margin-bottom:.35rem;line-height:1.3}
+.ind-d{font-size:.78rem;line-height:1.6;color:var(--mid)}
+
+/* ─── BOOKING ─── */
+.booking{
+  padding:7rem 2rem;
+  background:var(--paper);
+  position:relative;overflow:hidden;
+}
+.booking::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 50% 60% at 20% 50%, rgba(45,122,58,.06) 0%, transparent 60%);
+  pointer-events:none;
+}
+.booking-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:start;
+  position:relative;z-index:1;
+}
+.booking-subtitle{font-size:.9rem;color:var(--mid);margin-bottom:2rem;line-height:1.6}
+.what-you-get{display:flex;flex-direction:column;gap:.7rem;margin-bottom:2.5rem}
+.wyg{display:flex;align-items:flex-start;gap:.8rem;font-size:.88rem;line-height:1.55;color:var(--mid)}
+.wyg-check{
+  width:20px;height:20px;border-radius:50%;
+  background:var(--kiwi-pale);border:1.5px solid var(--kiwi-mid);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:.1rem;
+  font-size:.65rem;color:var(--kiwi);
+}
+.wyg strong{color:var(--ink)}
+.booking-note{
+  font-size:.82rem;color:var(--mid);
+  padding:1rem 1.2rem;
+  background:var(--gold-pale);
+  border-radius:var(--r);
+  border-left:3px solid var(--gold);
+  line-height:1.6;
+}
+.booking-note strong{color:var(--gold)}
+
+/* ─── BOOKING CARD ─── */
+.booking-card{
+  background:var(--w);
+  border-radius:var(--r-lg);
+  box-shadow:var(--shadow-lg);
+  overflow:hidden;
+  border:1px solid var(--border2);
+}
+.bc-header{
+  background:var(--ink);
+  padding:1.8rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.bc-title{font-size:1rem;font-weight:600;color:#fff}
+.bc-badge-free{
+  background:var(--kiwi-pale);color:var(--kiwi);
+  font-size:.82rem;font-weight:700;
+  padding:.3rem .9rem;border-radius:100px;
+  border:1px solid var(--kiwi-mid);
+}
+.bc-body{padding:2rem}
+.bc-step{margin-bottom:1.6rem}
+.bc-step-label{
+  font-size:.7rem;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--dim);margin-bottom:.6rem;
+}
+.bc-input{
+  width:100%;
+  font-family:'DM Sans',sans-serif;
+  font-size:.9rem;color:var(--ink);
+  background:var(--paper);border:1.5px solid var(--border);
+  border-radius:var(--r);padding:.75rem 1rem;
+  outline:none;transition:border-color .2s,box-shadow .2s;
+  -webkit-appearance:none;
+}
+.bc-input:focus{border-color:var(--kiwi);box-shadow:0 0 0 3px rgba(45,122,58,.1)}
+.bc-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6660' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
+.bc-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.btn-book{
+  width:100%;background:var(--kiwi);color:#fff;
+  font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;
+  padding:1rem;border:none;border-radius:100px;cursor:pointer;
+  transition:background .2s,transform .15s,box-shadow .2s;
+  margin-top:.5rem;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+}
+.btn-book:hover{background:var(--kiwi2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(45,122,58,.3)}
+.btn-book:disabled{opacity:.6;cursor:not-allowed;transform:none;box-shadow:none}
+.bc-secure{
+  display:flex;align-items:center;justify-content:center;gap:.4rem;
+  font-size:.72rem;color:var(--dim);margin-top:.8rem;
+}
+.book-success{
+  display:none;padding:3rem 2rem;text-align:center;
+}
+.success-icon{font-size:3rem;margin-bottom:1rem}
+.success-h{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--ink);margin-bottom:.6rem}
+.success-sub{font-size:.9rem;color:var(--mid);line-height:1.6}
+
+/* ─── HOW IT WORKS ─── */
+.how{padding:7rem 2rem;background:var(--paper2)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:3.5rem;position:relative}
+.steps::before{
+  content:'';position:absolute;
+  top:2.2rem;left:calc(12.5% + 1.5rem);right:calc(12.5% + 1.5rem);
+  height:1px;background:linear-gradient(to right,var(--kiwi-mid),var(--border2),var(--kiwi-mid));
+  z-index:0;
+}
+.step{padding:0 1.5rem;position:relative;z-index:1}
+.step-num{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--kiwi-pale);border:2px solid var(--kiwi-mid);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--kiwi);
+  margin-bottom:1.2rem;
+}
+.step-t{font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.4rem;line-height:1.3}
+.step-d{font-size:.82rem;line-height:1.65;color:var(--mid)}
+
+/* ─── OUTCOMES ─── */
+.outcomes{padding:7rem 2rem;background:var(--paper);position:relative;overflow:hidden}
+.outcomes-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
+.oc{
+  background:var(--w);border-radius:var(--r-lg);
+  padding:2rem;
+  border:1px solid var(--border2);
+  transition:box-shadow .2s,transform .2s;
+}
+.oc:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.oc-icon{font-size:1.8rem;margin-bottom:1rem}
+.oc-t{font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.5rem}
+.oc-d{font-size:.85rem;line-height:1.7;color:var(--mid)}
+.outcomes-note{
+  margin-top:2rem;
+  font-size:.82rem;color:var(--dim);
+  text-align:center;
+  font-style:italic;
+}
+
+/* ─── ABOUT ─── */
+.about{padding:7rem 2rem;background:var(--paper2)}
+.about-inner{display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;align-items:center}
+.portrait-img{
+  width:100%;aspect-ratio:3/4;border-radius:var(--r-lg);
+  background:var(--paper3);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;position:relative;
+}
+.portrait-svg{width:100%;height:100%}
+.portrait-badge{
+  position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;
+  background:rgba(14,14,14,.88);
+  backdrop-filter:blur(12px);
+  border-radius:var(--r);
+  padding:1rem 1.2rem;
+  display:flex;align-items:center;gap:.8rem;
+}
+.pb-dot{width:8px;height:8px;border-radius:50%;background:var(--kiwi2);flex-shrink:0;animation:pulse 2s infinite}
+.pb-text{font-size:.78rem;color:rgba(255,255,255,.8);line-height:1.4}
+.pb-text strong{color:#fff;font-weight:600}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(58,150,72,.4)}50%{box-shadow:0 0 0 6px rgba(58,150,72,0)}}
+.about-creds{display:flex;gap:1rem;flex-wrap:wrap;margin:1.5rem 0 2rem}
+.cred{
+  background:var(--paper);border:1px solid var(--border2);
+  border-radius:var(--r);padding:.5rem .9rem;
+  font-size:.73rem;font-weight:600;color:var(--mid);
+  display:flex;align-items:center;gap:.4rem;
+}
+.about-text{font-size:.92rem;line-height:1.8;color:var(--mid);margin-bottom:1.2rem}
+.about-text strong{color:var(--ink)}
+
+/* ─── SOCIAL PROOF BAR ─── */
+.proof-bar{
+  padding:4rem 2rem;
+  background:var(--kiwi);
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.proof-bar::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 50% 60% at 80% 30%, rgba(255,255,255,.08) 0%, transparent 60%);
+  pointer-events:none;
+}
+.proof-inner{
+  position:relative;z-index:1;
+  max-width:800px;margin:0 auto;
+}
+.proof-text{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.2rem,2.2vw,1.7rem);
+  font-weight:700;line-height:1.5;
+  color:#fff;margin-bottom:.6rem;
+}
+.proof-sub{
+  font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.6;
+}
+
+/* ─── FAQ ─── */
+.faq{padding:7rem 2rem;background:var(--paper)}
+.faq-list{margin-top:3rem;max-width:720px}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  padding:1.3rem 0;background:transparent;border:none;
+  font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:600;
+  color:var(--ink);cursor:pointer;text-align:left;gap:1rem;
+  transition:color .2s;
+}
+.faq-q:hover{color:var(--kiwi)}
+.faq-q.open{color:var(--kiwi)}
+.faq-icon{
+  width:22px;height:22px;border-radius:50%;
+  border:1.5px solid var(--border);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.85rem;color:var(--dim);
+  transition:transform .25s,border-color .2s,color .2s;
+}
+.faq-q.open .faq-icon{transform:rotate(45deg);border-color:var(--kiwi);color:var(--kiwi)}
+.faq-a{display:none;padding:0 0 1.3rem;font-size:.88rem;line-height:1.75;color:var(--mid)}
+.faq-a.open{display:block}
+
+/* ─── FOOTER CTA ─── */
+.footer-cta{
+  padding:7rem 2rem;background:var(--ink);
+  text-align:center;position:relative;overflow:hidden;
+}
+.footer-cta::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 50% 60% at 50% 0%, rgba(45,122,58,.15) 0%, transparent 65%);
+  pointer-events:none;
+}
+.fc-inner{position:relative;z-index:1}
+.fc-h{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4vw,3.5rem);
+  font-weight:900;letter-spacing:-.03em;line-height:1.1;
+  color:#fff;margin-bottom:1rem;
+}
+.fc-h em{font-style:italic;color:var(--kiwi2)}
+.fc-sub{font-size:1rem;color:rgba(255,255,255,.5);margin-bottom:2.5rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7}
+.btn-pri-lg{
+  background:var(--kiwi);color:#fff;
+  font-family:'DM Sans',sans-serif;
+  font-size:1.05rem;font-weight:700;
+  padding:1rem 2.4rem;border-radius:100px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:background .2s,transform .15s,box-shadow .2s;
+  display:inline-flex;align-items:center;gap:.5rem;
+}
+.btn-pri-lg:hover{background:var(--kiwi2);transform:translateY(-2px);box-shadow:0 12px 40px rgba(45,122,58,.4)}
+
+/* ─── FOOTER ─── */
+footer{
+  padding:2rem 4rem;background:#0a0a0a;
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.f-logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:rgba(255,255,255,.7)}
+.f-logo span{color:var(--kiwi2)}
+.f-links{display:flex;gap:1.8rem}
+.f-links a{font-size:.78rem;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:rgba(255,255,255,.7)}
+.f-copy{font-size:.75rem;color:rgba(255,255,255,.2)}
+
+/* ─── SCROLL REVEAL ─── */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .55s,transform .55s}
+.rv.on{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}
+.rv.d2{transition-delay:.2s}
+.rv.d3{transition-delay:.3s}
+.rv.d4{transition-delay:.4s}
+
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1000px){
+  nav{padding:0 1.5rem}
+  .nav-links{display:none}
+  .buckets{grid-template-columns:1fr}
+  .offer-cards{grid-template-columns:1fr}
+  .booking-inner{grid-template-columns:1fr;gap:3rem}
+  .steps{grid-template-columns:1fr 1fr}.steps::before{display:none}
+  .outcomes-grid{grid-template-columns:1fr}
+  .about-inner{grid-template-columns:1fr;gap:3rem}
+  .about-portrait{max-width:340px}
+  .ind-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:640px){
+  .hero-h{font-size:2.6rem}
+  .problem-h,.sec-h,.ind-h{font-size:1.9rem}
+  .bc-row{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .ind-grid{grid-template-columns:repeat(2,1fr)}
+  footer{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav id="nav">
+  <a class="nav-logo" href="#">Kiwi<span>AI</span> <em>New Zealand</em></a>
+  <div class="nav-links">
+    <a href="#problem">The Problem</a>
+    <a href="#solution">What We Do</a>
+    <a href="#industries">Industries</a>
+    <a href="#about">About</a>
+    <a href="#book">Let's Chat</a>
+  </div>
+  <a href="#book" class="btn-nav">Book a Free Chat</a>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-badge">AI Consultancy for NZ Business</div>
+  <div class="hero-eyebrow">Helping New Zealand businesses understand and implement AI</div>
+  <h1 class="hero-h">You don't need<br>more AI hype.<br>You need <em>clarity.</em></h1>
+  <p class="hero-sub">Most NZ business owners know AI is important. <strong>Almost none know exactly what it would do for their business.</strong> We fix that, starting with one focused conversation.</p>
+  <div class="hero-cta">
+    <a href="#book" class="btn-pri">Book a free 30-min chat</a>
+    <a href="#problem" class="btn-sec">See how it works</a>
+  </div>
+  <div class="hero-trust">
+    NZ-based · Remote-first · No jargon · No obligation
+  </div>
+</section>
+
+<!-- ─── PROBLEM ─── -->
+<section class="problem" id="problem">
+  <div class="sec">
+    <div class="rv">
+      <div class="eyebrow-dark">The Real Problem in New Zealand</div>
+      <h2 class="problem-h">Most NZ businesses fall into<br><em>one of three buckets.</em></h2>
+      <p class="problem-sub">And in all three cases, the answer is the same: you need someone to cut through the noise and show you what AI would actually do for your business.</p>
+    </div>
+    <div class="buckets rv d1">
+      <div class="bucket">
+        <div class="bucket-num">1</div>
+        <div class="bucket-icon">🤷</div>
+        <div class="bucket-t">Heard about it. Have no idea where to start.</div>
+        <div class="bucket-d">AI sounds useful but it all feels abstract and overwhelming. You're not sure if it even applies to a business like yours.</div>
+      </div>
+      <div class="bucket">
+        <div class="bucket-num">2</div>
+        <div class="bucket-icon">💬</div>
+        <div class="bucket-t">Using ChatGPT badly. Missing 90% of the value.</div>
+        <div class="bucket-d">You've asked it a few questions but you're not getting much out of it. You know there must be more to it. There is.</div>
+      </div>
+      <div class="bucket">
+        <div class="bucket-num">3</div>
+        <div class="bucket-icon">🏢</div>
+        <div class="bucket-t">Think AI is only for big companies with big budgets.</div>
+        <div class="bucket-d">It's not. A tradie in Tauranga and a retailer in Rotorua can both use AI to win more work and get more hours back in their week.</div>
+      </div>
+    </div>
+    <div class="quote-box rv d2">
+      <div class="quote-text">"AI sounds great but I have no idea what it would actually do for my business."</div>
+      <div class="quote-attr">This is what <strong>nearly every NZ business owner</strong> says to us. That confusion is exactly our entry point.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SOLUTION ─── -->
+<section class="solution" id="solution">
+  <div class="sec">
+    <div class="rv">
+      <div class="eyebrow-light">What KiwiAI Does</div>
+      <h2 class="sec-h">Our product isn't AI.<br><em>Our product is clarity.</em></h2>
+      <p class="sec-sub">We help NZ business owners understand what AI can and can't do for their specific business. Then, if you want to act on it, we help you do that too.</p>
+    </div>
+    <div class="offer-cards rv d1">
+      <div class="offer-card primary">
+        <div class="offer-tag free">Start here</div>
+        <div class="offer-icon">☕</div>
+        <div class="offer-t">Free Intro Chat</div>
+        <div class="offer-price">Free <span class="price-note">· 30 minutes · Zoom</span></div>
+        <div class="offer-d">A casual, no-pressure conversation about your business and where AI might fit. No prep needed. No sales pitch. Just an honest chat with someone who understands both AI and business.</div>
+        <ul class="offer-list">
+          <li><strong>We learn about your business</strong> and what you're dealing with</li>
+          <li><strong>You get initial thoughts</strong> on where AI could help</li>
+          <li><strong>We'll be straight with you</strong> if AI isn't the right move right now</li>
+          <li><strong>No obligation</strong> to do anything after the call</li>
+        </ul>
+        <a href="#book" class="btn-pri" style="margin-top:1.5rem;display:inline-flex">Book a free chat</a>
+      </div>
+      <div class="offer-card">
+        <div class="offer-tag paid">Go deeper</div>
+        <div class="offer-icon">🔍</div>
+        <div class="offer-t">AI Discovery Session</div>
+        <div class="offer-price">NZ$350 <span class="price-note">· 60 minutes · Zoom</span></div>
+        <div class="offer-d">A structured deep-dive into your entire business. We map your workflows, staff roles, customer journey, marketing, and operations. You receive a written AI opportunity report within 48 hours.</div>
+        <ul class="offer-list">
+          <li><strong>Full business audit</strong> across every function</li>
+          <li><strong>Your top 3 quick-win opportunities</strong> ranked by ROI</li>
+          <li><strong>12+ point AI opportunity list</strong> tailored to your business</li>
+          <li><strong>Written report</strong> delivered within 48 hours</li>
+        </ul>
+        <p style="margin-top:1.2rem;font-size:.8rem;color:var(--dim);font-style:italic">Available after your free intro chat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── INDUSTRIES ─── -->
+<section class="industries" id="industries">
+  <div class="sec">
+    <div class="rv" style="text-align:center;margin-bottom:3.5rem">
+      <div class="eyebrow-light" style="text-align:center">Every Industry</div>
+      <h2 class="ind-h">AI for every kind of<br><em>NZ business</em></h2>
+      <p class="ind-sub">If your business has workflows, customers, and data, we can find AI opportunities in it. No industry is too small, too niche, or too traditional.</p>
+    </div>
+    <div class="ind-grid rv d1">
+      <div class="ind-card">
+        <div class="ind-icon">🏗</div>
+        <div class="ind-t">Construction & Trades</div>
+        <div class="ind-d">Quoting, scheduling, compliance, client comms</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🌿</div>
+        <div class="ind-t">Agriculture & Primary</div>
+        <div class="ind-d">Export docs, market alerts, farm management</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🍽</div>
+        <div class="ind-t">Hospitality & Food</div>
+        <div class="ind-d">Reservations, reviews, rostering, menu AI</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏥</div>
+        <div class="ind-t">Healthcare & Wellness</div>
+        <div class="ind-d">Appointments, patient comms, admin automation</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏡</div>
+        <div class="ind-t">Real Estate</div>
+        <div class="ind-d">AI listings, viewings, market intel, lead nurture</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🛍</div>
+        <div class="ind-t">Retail & E-Commerce</div>
+        <div class="ind-d">AI sales, inventory prediction, email, returns</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">⚖️</div>
+        <div class="ind-t">Legal & Professional</div>
+        <div class="ind-d">Document drafting, intake, research, billing</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🚛</div>
+        <div class="ind-t">Logistics & Transport</div>
+        <div class="ind-d">Route optimisation, dispatch, tracking, fleet AI</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏄</div>
+        <div class="ind-t">Tourism & Adventure</div>
+        <div class="ind-d">24/7 bookings, multilingual, weather-aware</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🚗</div>
+        <div class="ind-t">Automotive</div>
+        <div class="ind-d">Test drives, trade-ins, service reminders, leads</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">💻</div>
+        <div class="ind-t">Tech & Startups</div>
+        <div class="ind-d">Dev tools, onboarding AI, sales intelligence</div>
+      </div>
+      <div class="ind-card ind-card-any">
+        <div class="ind-icon">✨</div>
+        <div class="ind-t">Any Industry</div>
+        <div class="ind-d">If you have processes and customers, we have AI for you</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BOOK ─── -->
+<section class="booking" id="book">
+  <div class="sec">
+    <div class="booking-inner">
+      <div class="booking-left rv">
+        <div class="eyebrow-light">Let's Have a Chat</div>
+        <h2 class="sec-h">One conversation.<br><em>Total clarity.</em></h2>
+        <p class="booking-subtitle">Book a free 30-minute call with Omar. No pitch. No obligation. Just an honest conversation about what AI could do for your business and whether it's even worth pursuing right now.</p>
+        <div class="what-you-get">
+          <div class="wyg"><div class="wyg-check">✓</div><div><strong>We'll talk through your business</strong> and understand what you actually do day to day</div></div>
+          <div class="wyg"><div class="wyg-check">✓</div><div><strong>You'll get real initial thoughts</strong> on where AI could make a difference</div></div>
+          <div class="wyg"><div class="wyg-check">✓</div><div><strong>Straight-talking</strong> — if AI isn't right for you right now, we'll say so</div></div>
+          <div class="wyg"><div class="wyg-check">✓</div><div><strong>Completely free</strong> — no credit card, no catch, no follow-up spam</div></div>
+          <div class="wyg"><div class="wyg-check">✓</div><div><strong>No obligation</strong> — you'll leave with clarity regardless of what you decide</div></div>
+        </div>
+        <div class="booking-note">
+          <strong>Want more depth?</strong> After the chat, if you want a full structured AI audit of your business with a written report, you can book a paid AI Discovery Session (NZ$350, 60 min).
+        </div>
+      </div>
+
+      <div class="rv d2">
+        <div class="booking-card" id="bookingCard">
+          <div class="bc-header">
+            <div class="bc-title">☕ Book a free chat</div>
+            <div class="bc-badge-free">Free · 30 min</div>
+          </div>
+          <div class="bc-body" id="bcBody">
+            <!-- Replace with Cal.com or Calendly embed -->
+            <!-- To embed Cal.com: replace the form below with:
+                 <div id="cal-embed" style="width:100%;min-height:500px">
+                   <iframe src="https://cal.com/YOUR_USERNAME/30min" width="100%" height="600" frameborder="0"></iframe>
+                 </div>
+            -->
+            <div class="bc-step">
+              <div class="bc-step-label">Your details</div>
+              <div class="bc-row" style="margin-bottom:.8rem">
+                <input class="bc-input" type="text" placeholder="First name" id="fname" required>
+                <input class="bc-input" type="text" placeholder="Last name" id="lname">
+              </div>
+              <input class="bc-input" style="margin-bottom:.8rem" type="email" placeholder="Email address" id="femail" required>
+              <input class="bc-input" style="margin-bottom:.8rem" type="text" placeholder="Business name (optional)" id="fbiz">
+              <select class="bc-input bc-select" style="margin-bottom:.8rem" id="findustry">
+                <option value="">What industry are you in?</option>
+                <option>Construction & Trades</option>
+                <option>Agriculture & Primary</option>
+                <option>Hospitality & Food</option>
+                <option>Retail & E-Commerce</option>
+                <option>Health & Wellness</option>
+                <option>Real Estate</option>
+                <option>Tourism & Adventure</option>
+                <option>Tech & Startups</option>
+                <option>Legal & Professional Services</option>
+                <option>Logistics & Transport</option>
+                <option>Automotive</option>
+                <option>Other</option>
+              </select>
+              <textarea class="bc-input" rows="3" placeholder="Anything you'd like to cover? (optional)" style="resize:vertical" id="fmessage"></textarea>
+            </div>
+
+            <button class="btn-book" id="btnBook" onclick="handleBook()">
+              Request a Chat →
+            </button>
+            <div class="bc-secure">We'll reply within 24 hours with a Zoom link and time options</div>
+          </div>
+
+          <div class="book-success" id="bookSuccess">
+            <div class="success-icon">🎉</div>
+            <div class="success-h">Request received!</div>
+            <div class="success-sub">We'll be in touch within 24 hours to confirm a time that works. Check your inbox (and spam, just in case).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW IT WORKS ─── -->
+<section class="how" id="how">
+  <div class="sec">
+    <div class="rv">
+      <div class="eyebrow-light">How It Works</div>
+      <h2 class="sec-h">From booking to <em>clarity</em><br>in four simple steps.</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv">
+        <div class="step-num">1</div>
+        <div class="step-t">Book a free chat</div>
+        <div class="step-d">Fill in the form above with a few quick details. We'll get back to you within 24 hours with a Zoom link.</div>
+      </div>
+      <div class="step rv d1">
+        <div class="step-num">2</div>
+        <div class="step-t">We talk through your business</div>
+        <div class="step-d">A casual 30-minute conversation. What you do, how your team works, where your time goes. We'll share initial thoughts on where AI fits.</div>
+      </div>
+      <div class="step rv d2">
+        <div class="step-num">3</div>
+        <div class="step-t">Go deeper (if you want to)</div>
+        <div class="step-d">If AI looks like a good fit, you can book a paid AI Discovery Session. A structured 60-minute deep-dive with a written report.</div>
+      </div>
+      <div class="step rv d3">
+        <div class="step-num">4</div>
+        <div class="step-t">You get a clear AI roadmap</div>
+        <div class="step-d">Within 48 hours of the Discovery Session, you receive a written report: every opportunity, ranked by impact, with clear next steps.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── OUTCOMES (PAID SESSION) ─── -->
+<section class="outcomes" id="outcomes">
+  <div class="sec">
+    <div class="rv">
+      <div class="eyebrow-light">What You Get From the AI Discovery Session</div>
+      <h2 class="sec-h">After the paid session, you'll know<br><em>exactly what to do next.</em></h2>
+    </div>
+    <div class="outcomes-grid">
+      <div class="oc rv">
+        <div class="oc-icon">🗺</div>
+        <div class="oc-t">A clear AI map of your business</div>
+        <div class="oc-d">Every workflow, task, and touchpoint reviewed. You'll understand where AI fits into your operation and where it doesn't need to.</div>
+      </div>
+      <div class="oc rv d1">
+        <div class="oc-icon">⚡</div>
+        <div class="oc-t">Your top 3 quick-win opportunities</div>
+        <div class="oc-d">The highest-ROI moves you can make in the next 30 days. Concrete, specific to your business, and achievable without a big tech budget.</div>
+      </div>
+      <div class="oc rv d2">
+        <div class="oc-icon">📋</div>
+        <div class="oc-t">A 12+ point AI opportunity list</div>
+        <div class="oc-d">Every AI application we identify for your business, written up clearly. A reference you can return to as you grow your AI capability over time.</div>
+      </div>
+      <div class="oc rv d3">
+        <div class="oc-icon">📄</div>
+        <div class="oc-t">A written report within 48 hours</div>
+        <div class="oc-d">Everything from the session distilled into a clear, actionable document. Share it with your team, your partner, or your accountant.</div>
+      </div>
+    </div>
+    <p class="outcomes-note rv d4">These outcomes are from the paid AI Discovery Session (NZ$350). The free intro chat gives you initial thoughts and helps you decide if it's worth going deeper.</p>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section class="about" id="about">
+  <div class="sec">
+    <div class="about-inner">
+      <div class="about-portrait rv">
+        <div class="portrait-img">
+          <svg class="portrait-svg" viewBox="0 0 400 540" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="pg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e8f4ea"/><stop offset="100%" stop-color="#d4ecd8"/></linearGradient>
+              <radialGradient id="pg2" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#b8ddbf" stop-opacity=".4"/><stop offset="100%" stop-color="#e8f4ea" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="400" height="540" fill="url(#pg)"/>
+            <rect width="400" height="540" fill="url(#pg2)"/>
+            <ellipse cx="200" cy="148" rx="68" ry="75" fill="#2d7a3a" opacity=".15"/>
+            <ellipse cx="200" cy="148" rx="52" ry="60" fill="#2d7a3a" opacity=".2"/>
+            <ellipse cx="200" cy="145" rx="46" ry="52" fill="#fff" opacity=".5"/>
+            <path d="M90 380 Q90 310 140 290 Q170 280 200 278 Q230 280 260 290 Q310 310 310 380 L310 540 L90 540Z" fill="#2d7a3a" opacity=".12"/>
+            <path d="M110 400 Q110 340 155 318 Q175 308 200 306 Q225 308 245 318 Q290 340 290 400 L290 540 L110 540Z" fill="#2d7a3a" opacity=".15"/>
+            <circle cx="80" cy="200" r="3" fill="#2d7a3a" opacity=".3"/>
+            <circle cx="320" cy="160" r="3" fill="#2d7a3a" opacity=".3"/>
+            <circle cx="60" cy="300" r="2" fill="#2d7a3a" opacity=".25"/>
+            <circle cx="340" cy="280" r="2" fill="#2d7a3a" opacity=".25"/>
+            <line x1="80" y1="200" x2="120" y2="185" stroke="#2d7a3a" stroke-width="1" opacity=".2"/>
+            <line x1="320" y1="160" x2="278" y2="150" stroke="#2d7a3a" stroke-width="1" opacity=".2"/>
+            <g stroke="#2d7a3a" stroke-width=".5" opacity=".06">
+              <line x1="0" y1="100" x2="400" y2="100"/><line x1="0" y1="200" x2="400" y2="200"/>
+              <line x1="0" y1="300" x2="400" y2="300"/><line x1="0" y1="400" x2="400" y2="400"/>
+              <line x1="100" y1="0" x2="100" y2="540"/><line x1="200" y1="0" x2="200" y2="540"/><line x1="300" y1="0" x2="300" y2="540"/>
+            </g>
+            <text x="200" y="520" text-anchor="middle" font-family="monospace" font-size="9" fill="#2d7a3a" opacity=".4" letter-spacing="3">KIWIAI.NZ</text>
+          </svg>
+          <div class="portrait-badge">
+            <div class="pb-dot"></div>
+            <div class="pb-text"><strong>Omar, Founder</strong><br>15+ yrs in AI & blockchain</div>
+          </div>
+        </div>
+      </div>
+      <div class="rv d1">
+        <div class="eyebrow-light">About KiwiAI</div>
+        <h2 class="sec-h">This isn't a tech company.<br><em>It's a clarity service.</em></h2>
+        <div class="about-creds">
+          <div class="cred">15+ yrs blockchain & AI</div>
+          <div class="cred">1,500+ projects assessed</div>
+          <div class="cred">NZ-based, remote-first</div>
+        </div>
+        <p class="about-text">I've been in AI and blockchain since before either was trendy. I've worked on global campaigns touching McDonald's, Ford, Vodafone, and SkyTV. I was the primary deal-router for a major capital firm, personally assessing over 1,500 projects across every industry you can think of.</p>
+        <p class="about-text">Before KiwiAI, I ran <strong>Block Consult</strong>, a Web3 boutique consultancy. My job there was the same thing I do now: take complex technology and translate it into business decisions that actually make sense.</p>
+        <p class="about-text"><strong>The best outcome from a session isn't that you hire me.</strong> It's that you leave with your head completely clear about what AI means for your business. That's what I'm optimising for.</p>
+        <p class="about-text">I'm based in Aotearoa, working with Kiwi businesses across every region. Remote-first. Straight-talking. No fluff.</p>
+        <a href="#book" class="btn-pri" style="margin-top:1rem">Let's have a chat</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SOCIAL PROOF BAR ─── -->
+<section class="proof-bar">
+  <div class="proof-inner rv">
+    <div class="proof-text">Launching in 2026. Early conversations open now.</div>
+    <div class="proof-sub">We're talking to NZ businesses across 12+ industries. Remote-first, no jargon, no fluff. Book your free intro chat and be among the first.</div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="faq" id="faq">
+  <div class="sec-sm">
+    <div class="rv">
+      <div class="eyebrow-light">Common Questions</div>
+      <h2 class="sec-h">Straight answers<br><em>to fair questions.</em></h2>
+    </div>
+    <div class="faq-list rv d1">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I need to know anything about AI before the chat?<div class="faq-icon">+</div></button>
+        <div class="faq-a">Not a thing. In fact, the less you know, the better we can calibrate the conversation to where you actually are. You just need to know your own business. We'll handle the AI part.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if AI genuinely doesn't apply to my business?<div class="faq-icon">+</div></button>
+        <div class="faq-a">We'll tell you that, honestly. We'd rather save you money and time than sell you something you don't need. If AI isn't the right move for you right now, we'll say so on the free call.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is the free chat just a sales pitch for the paid session?<div class="faq-icon">+</div></button>
+        <div class="faq-a">No. The free chat is genuinely useful on its own. You'll leave with a real sense of whether AI is relevant to your business. The paid Discovery Session exists for people who want to go much deeper, but there's zero pressure to book it.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What industries do you work with?<div class="faq-icon">+</div></button>
+        <div class="faq-a">All of them, really. Construction, trades, hospitality, healthcare, agriculture, real estate, retail, tourism, legal, logistics, automotive, tech. If you run a business, we can help you find AI opportunities in it.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What's the difference between the free chat and the paid session?<div class="faq-icon">+</div></button>
+        <div class="faq-a">The free 30-minute chat is casual and exploratory. You'll get initial thoughts and a sense of direction. The paid AI Discovery Session (NZ$350, 60 min) is a structured deep-dive with a written report: a full AI map of your business, your top quick wins, and a 12+ point opportunity list delivered within 48 hours.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Who actually does the AI implementation work?<div class="faq-icon">+</div></button>
+        <div class="faq-a">I work with a technical partner who handles all AI builds and implementation. My role is understanding your business, identifying the opportunities, and translating between business needs and technical solutions. You get the benefit of both.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What happens after the free chat?<div class="faq-icon">+</div></button>
+        <div class="faq-a">That's entirely up to you. If AI looks promising, you might want to book a paid Discovery Session for the full deep-dive. If not, you've lost nothing except 30 minutes, and you'll have a much clearer picture than you started with.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER CTA ─── -->
+<section class="footer-cta">
+  <div class="fc-inner">
+    <h2 class="fc-h">Still thinking about it?<br><em>That's the problem.</em></h2>
+    <p class="fc-sub">Every week you don't understand AI, your competitors get a little further ahead. One conversation changes that. Free. No obligation. Just clarity.</p>
+    <a href="#book" class="btn-pri-lg">Book a free chat</a>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="f-logo">Kiwi<span>AI</span></div>
+  <div class="f-links">
+    <a href="#solution">Services</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a href="mailto:hello@kiwiai.nz">hello@kiwiai.nz</a>
+  </div>
+  <div class="f-copy">&copy; 2026 KiwiAI &middot; Aotearoa New Zealand</div>
+</footer>
+
+<script>
+// ─── NAV SCROLL ───
+window.addEventListener('scroll',function(){
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20);
+},{passive:true});
+
+// ─── SCROLL REVEAL ───
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('on')})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(r){io.observe(r)});
+
+// ─── BOOKING SUBMIT ───
+function handleBook(){
+  var name=document.getElementById('fname').value.trim();
+  var email=document.getElementById('femail').value.trim();
+  if(!name){alert('Please enter your first name.');return}
+  if(!email||email.indexOf('@')===-1){alert('Please enter a valid email address.');return}
+
+  var btn=document.getElementById('btnBook');
+  btn.disabled=true;
+  btn.textContent='Sending...';
+
+  // Simulate form submission (replace with real endpoint)
+  setTimeout(function(){
+    document.getElementById('bcBody').style.display='none';
+    document.getElementById('bookSuccess').style.display='block';
+    document.getElementById('bookingCard').querySelector('.bc-header').style.display='none';
+    document.getElementById('bookingCard').scrollIntoView({behavior:'smooth',block:'center'});
+  },800);
+}
+
+// ─── FAQ ───
+function toggleFaq(btn){
+  var isOpen=btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(function(q){q.classList.remove('open');q.nextElementSibling.classList.remove('open')});
+  if(!isOpen){btn.classList.add('open');btn.nextElementSibling.classList.add('open')}
+}
+</script>
+</body>
+</html>
