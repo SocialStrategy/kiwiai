@@ -781,48 +781,7 @@ footer{
             <div class="bc-badge-free">Free · 30 min</div>
           </div>
           <div class="bc-body" id="bcBody">
-            <!-- Replace with Cal.com or Calendly embed -->
-            <!-- To embed Cal.com: replace the form below with:
-                 <div id="cal-embed" style="width:100%;min-height:500px">
-                   <iframe src="https://cal.com/YOUR_USERNAME/30min" width="100%" height="600" frameborder="0"></iframe>
-                 </div>
-            -->
-            <div class="bc-step">
-              <div class="bc-step-label">Your details</div>
-              <div class="bc-row" style="margin-bottom:.8rem">
-                <input class="bc-input" type="text" placeholder="First name" id="fname" required>
-                <input class="bc-input" type="text" placeholder="Last name" id="lname">
-              </div>
-              <input class="bc-input" style="margin-bottom:.8rem" type="email" placeholder="Email address" id="femail" required>
-              <input class="bc-input" style="margin-bottom:.8rem" type="text" placeholder="Business name (optional)" id="fbiz">
-              <select class="bc-input bc-select" style="margin-bottom:.8rem" id="findustry">
-                <option value="">What industry are you in?</option>
-                <option>Construction & Trades</option>
-                <option>Agriculture & Primary</option>
-                <option>Hospitality & Food</option>
-                <option>Retail & E-Commerce</option>
-                <option>Health & Wellness</option>
-                <option>Real Estate</option>
-                <option>Tourism & Adventure</option>
-                <option>Tech & Startups</option>
-                <option>Legal & Professional Services</option>
-                <option>Logistics & Transport</option>
-                <option>Automotive</option>
-                <option>Other</option>
-              </select>
-              <textarea class="bc-input" rows="3" placeholder="Anything you'd like to cover? (optional)" style="resize:vertical" id="fmessage"></textarea>
-            </div>
-
-            <button class="btn-book" id="btnBook" onclick="handleBook()">
-              Request a Chat →
-            </button>
-            <div class="bc-secure">We'll reply within 24 hours with a Zoom link and time options</div>
-          </div>
-
-          <div class="book-success" id="bookSuccess">
-            <div class="success-icon">🎉</div>
-            <div class="success-h">Request received!</div>
-            <div class="success-sub">We'll be in touch within 24 hours to confirm a time that works. Check your inbox (and spam, just in case).</div>
+            <div id="cal-embed" style="width:100%;min-height:500px;overflow:hidden"></div>
           </div>
         </div>
       </div>
@@ -901,31 +860,7 @@ footer{
     <div class="about-inner">
       <div class="about-portrait rv">
         <div class="portrait-img">
-          <svg class="portrait-svg" viewBox="0 0 400 540" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="pg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e8f4ea"/><stop offset="100%" stop-color="#d4ecd8"/></linearGradient>
-              <radialGradient id="pg2" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#b8ddbf" stop-opacity=".4"/><stop offset="100%" stop-color="#e8f4ea" stop-opacity="0"/></radialGradient>
-            </defs>
-            <rect width="400" height="540" fill="url(#pg)"/>
-            <rect width="400" height="540" fill="url(#pg2)"/>
-            <ellipse cx="200" cy="148" rx="68" ry="75" fill="#2d7a3a" opacity=".15"/>
-            <ellipse cx="200" cy="148" rx="52" ry="60" fill="#2d7a3a" opacity=".2"/>
-            <ellipse cx="200" cy="145" rx="46" ry="52" fill="#fff" opacity=".5"/>
-            <path d="M90 380 Q90 310 140 290 Q170 280 200 278 Q230 280 260 290 Q310 310 310 380 L310 540 L90 540Z" fill="#2d7a3a" opacity=".12"/>
-            <path d="M110 400 Q110 340 155 318 Q175 308 200 306 Q225 308 245 318 Q290 340 290 400 L290 540 L110 540Z" fill="#2d7a3a" opacity=".15"/>
-            <circle cx="80" cy="200" r="3" fill="#2d7a3a" opacity=".3"/>
-            <circle cx="320" cy="160" r="3" fill="#2d7a3a" opacity=".3"/>
-            <circle cx="60" cy="300" r="2" fill="#2d7a3a" opacity=".25"/>
-            <circle cx="340" cy="280" r="2" fill="#2d7a3a" opacity=".25"/>
-            <line x1="80" y1="200" x2="120" y2="185" stroke="#2d7a3a" stroke-width="1" opacity=".2"/>
-            <line x1="320" y1="160" x2="278" y2="150" stroke="#2d7a3a" stroke-width="1" opacity=".2"/>
-            <g stroke="#2d7a3a" stroke-width=".5" opacity=".06">
-              <line x1="0" y1="100" x2="400" y2="100"/><line x1="0" y1="200" x2="400" y2="200"/>
-              <line x1="0" y1="300" x2="400" y2="300"/><line x1="0" y1="400" x2="400" y2="400"/>
-              <line x1="100" y1="0" x2="100" y2="540"/><line x1="200" y1="0" x2="200" y2="540"/><line x1="300" y1="0" x2="300" y2="540"/>
-            </g>
-            <text x="200" y="520" text-anchor="middle" font-family="monospace" font-size="9" fill="#2d7a3a" opacity=".4" letter-spacing="3">KIWIAI.NZ</text>
-          </svg>
+          <img src="omar-profile.jpg" alt="Omar Al-Sobky, Founder of KiwiAI" style="width:100%;height:100%;object-fit:cover;object-position:center top">
           <div class="portrait-badge">
             <div class="pb-dot"></div>
             <div class="pb-text"><strong>Omar, Founder</strong><br>15+ yrs in AI & blockchain</div>
@@ -1029,25 +964,16 @@ window.addEventListener('scroll',function(){
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('on')})},{threshold:.1});
 document.querySelectorAll('.rv').forEach(function(r){io.observe(r)});
 
-// ─── BOOKING SUBMIT ───
-function handleBook(){
-  var name=document.getElementById('fname').value.trim();
-  var email=document.getElementById('femail').value.trim();
-  if(!name){alert('Please enter your first name.');return}
-  if(!email||email.indexOf('@')===-1){alert('Please enter a valid email address.');return}
-
-  var btn=document.getElementById('btnBook');
-  btn.disabled=true;
-  btn.textContent='Sending...';
-
-  // Simulate form submission (replace with real endpoint)
-  setTimeout(function(){
-    document.getElementById('bcBody').style.display='none';
-    document.getElementById('bookSuccess').style.display='block';
-    document.getElementById('bookingCard').querySelector('.bc-header').style.display='none';
-    document.getElementById('bookingCard').scrollIntoView({behavior:'smooth',block:'center'});
-  },800);
-}
+// ─── CAL.COM EMBED ───
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://cal.com"});
+Cal("inline", {
+  elementOrSelector:"#cal-embed",
+  calLink:"kiwiai/30min",
+  layout:"month_view",
+  config:{theme:"light"}
+});
+Cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
 
 // ─── FAQ ───
 function toggleFaq(btn){
