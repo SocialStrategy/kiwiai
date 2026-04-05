@@ -249,6 +249,44 @@ nav.scrolled{box-shadow:var(--shadow)}
 }
 .offer-list li strong{color:var(--ink)}
 
+/* ─── CASE STUDIES ─── */
+.cases{padding:7rem 2rem;background:var(--paper2);position:relative;overflow:hidden}
+.cases-intro{font-size:1rem;line-height:1.75;color:var(--mid);max-width:580px;margin-bottom:3.5rem}
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
+.case{
+  background:var(--w);
+  border-radius:var(--r-lg);
+  border:1.5px solid var(--border2);
+  padding:2rem 1.8rem;
+  transition:box-shadow .2s,transform .2s;
+  display:flex;flex-direction:column;
+}
+.case:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.case-industry{
+  display:inline-block;
+  font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--kiwi);background:var(--kiwi-pale);border:1px solid var(--kiwi-mid);
+  padding:.25rem .7rem;border-radius:100px;margin-bottom:1rem;align-self:flex-start;
+}
+.case-region{
+  display:inline-block;
+  font-size:.6rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--dim);background:var(--paper2);border:1px solid var(--border);
+  padding:.2rem .6rem;border-radius:100px;margin-left:.4rem;
+}
+.case-t{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:.5rem;line-height:1.35}
+.case-d{font-size:.84rem;line-height:1.7;color:var(--mid);margin-bottom:1rem;flex:1}
+.case-result{
+  font-size:.82rem;font-weight:600;color:var(--kiwi);
+  padding-top:.8rem;border-top:1px solid var(--border2);
+}
+.cases-more{
+  text-align:center;margin-top:2rem;
+  font-size:.88rem;color:var(--mid);font-style:italic;
+}
+@media(max-width:1000px){.cases-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.cases-grid{grid-template-columns:1fr}}
+
 /* ─── INDUSTRIES ─── */
 .industries{padding:7rem 2rem;background:var(--paper2)}
 .ind-h{
@@ -580,11 +618,10 @@ footer{
 <nav id="nav">
   <a class="nav-logo" href="#">Kiwi<span>AI</span> <em>New Zealand</em></a>
   <div class="nav-links">
-    <a href="#problem">The Problem</a>
-    <a href="#solution">What We Do</a>
-    <a href="#industries">Industries</a>
+    <a href="#cases">Our Work</a>
+    <a href="#solution">Services</a>
     <a href="#about">About</a>
-    <a href="#book">Let's Chat</a>
+    <a href="#book">Book a Chat</a>
   </div>
   <a href="#book" class="btn-nav">Book a Free Chat</a>
 </nav>
@@ -602,6 +639,56 @@ footer{
   </div>
   <div class="hero-trust">
     NZ-based · Remote-first · No jargon · No obligation
+  </div>
+</section>
+
+<!-- ─── CASE STUDIES ─── -->
+<section class="cases" id="cases">
+  <div class="sec">
+    <div class="rv">
+      <div class="eyebrow-light">Real Work, Real Businesses</div>
+      <h2 class="sec-h">We don't just talk about AI.<br><em>We build it.</em></h2>
+      <p class="cases-intro">These are a few examples of AI systems we've designed and deployed for businesses. Every one of them is running in production right now.</p>
+    </div>
+    <div class="cases-grid">
+      <div class="case rv">
+        <div><span class="case-industry">Solar Energy</span><span class="case-region">Australia</span></div>
+        <div class="case-t">End-to-end workflow automation for a solar installer</div>
+        <div class="case-d">Automated the full pipeline from customer enquiry through to quoting, job scheduling, invoicing, and grid connection applications. AI handles CRM triage, document generation, and follow-up sequencing across five separate business systems.</div>
+        <div class="case-result">Staff freed from 15+ hours/week of manual admin</div>
+      </div>
+      <div class="case rv d1">
+        <div><span class="case-industry">Asset Management</span><span class="case-region">Netherlands</span></div>
+        <div class="case-t">Quarterly report analysis across 180 companies</div>
+        <div class="case-d">Built a system that automatically downloads, analyses, and indexes quarterly reports from 180 portfolio companies. Full vector search across every document so analysts can query across the entire portfolio in natural language.</div>
+        <div class="case-result">Saving the firm 180+ man-hours every quarter</div>
+      </div>
+      <div class="case rv d2">
+        <div><span class="case-industry">Legal</span><span class="case-region">Thailand</span></div>
+        <div class="case-t">Document review and engagement letter automation</div>
+        <div class="case-d">Designed an AI document review system for junior staff at a Bangkok law firm. Reviews contracts and flags issues in seconds. Engagement letters, NDAs, and standard correspondence now generate automatically from intake data.</div>
+        <div class="case-result">Document review time cut by 70%</div>
+      </div>
+      <div class="case rv">
+        <div><span class="case-industry">Back-Office Services</span><span class="case-region">Indonesia</span></div>
+        <div class="case-t">OCR receipt and document processing at scale</div>
+        <div class="case-d">Built an intelligent OCR pipeline for a back-office-as-a-service company processing thousands of receipts and invoices monthly. Extracts, categorises, and reconciles financial documents with minimal human intervention.</div>
+        <div class="case-result">Processing accuracy above 97%</div>
+      </div>
+      <div class="case rv d1">
+        <div><span class="case-industry">Online Communities</span><span class="case-region">Global</span></div>
+        <div class="case-t">Intelligent spam and scam protection for chat platforms</div>
+        <div class="case-d">Deployed AI-powered moderation bots across Discord and Telegram communities. Context-aware detection that catches sophisticated scams, phishing, and social engineering that rule-based filters miss entirely.</div>
+        <div class="case-result">Scam detection rate 12x higher than keyword filters</div>
+      </div>
+      <div class="case rv d2">
+        <div><span class="case-industry">Construction</span><span class="case-region">New Zealand</span></div>
+        <div class="case-t">AI quoting from job-site photos</div>
+        <div class="case-d">A Christchurch builder photographs a job site and the AI generates a detailed scope of work and preliminary quote within minutes. Pulls from historical job data and current material pricing. The builder reviews and sends, instead of spending an evening on paperwork.</div>
+        <div class="case-result">Quoting time reduced from 2 hours to 15 minutes</div>
+      </div>
+    </div>
+    <p class="cases-more rv">These are a handful of examples. Every business is different, and so is every AI solution we build.</p>
   </div>
 </section>
 
@@ -644,9 +731,9 @@ footer{
 <section class="solution" id="solution">
   <div class="sec">
     <div class="rv">
-      <div class="eyebrow-light">What KiwiAI Does</div>
-      <h2 class="sec-h">Our product isn't AI.<br><em>Our product is clarity.</em></h2>
-      <p class="sec-sub">We help NZ business owners understand what AI can and can't do for their specific business. Then, if you want to act on it, we help you do that too.</p>
+      <div class="eyebrow-light">How to Get Started</div>
+      <h2 class="sec-h">Two ways to work with us.<br><em>Start free.</em></h2>
+      <p class="sec-sub">We help NZ business owners understand what AI can do for their specific business. And when you're ready to act on it, we build it for you.</p>
     </div>
     <div class="offer-cards rv d1">
       <div class="offer-card primary">
@@ -668,7 +755,7 @@ footer{
         <div class="offer-icon">🔍</div>
         <div class="offer-t">AI Discovery Session</div>
         <div class="offer-price">NZ$350 <span class="price-note">· 90 minutes · Zoom</span></div>
-        <div class="offer-d">A structured deep-dive into your entire business. We map your workflows, staff roles, customer journey, marketing, and operations. You receive a written AI opportunity report within 48 hours.</div>
+        <div class="offer-d">A structured deep-dive into your entire business. We map your workflows, staff roles, customer journey, marketing, and operations. You walk away with a written AI opportunity report within 48 hours.</div>
         <ul class="offer-list">
           <li><strong>Full business audit</strong> across every function</li>
           <li><strong>Your top 3 quick-win opportunities</strong> ranked by ROI</li>
@@ -681,79 +768,6 @@ footer{
   </div>
 </section>
 
-<!-- ─── INDUSTRIES ─── -->
-<section class="industries" id="industries">
-  <div class="sec">
-    <div class="rv" style="text-align:center;margin-bottom:3.5rem">
-      <div class="eyebrow-light" style="text-align:center">Every Industry</div>
-      <h2 class="ind-h">AI for every kind of<br><em>NZ business</em></h2>
-      <p class="ind-sub">If your business has workflows, customers, and data, we can find AI opportunities in it. No industry is too small, too niche, or too traditional.</p>
-    </div>
-    <div class="ind-grid rv d1">
-      <div class="ind-card">
-        <div class="ind-icon">🏗</div>
-        <div class="ind-t">Construction & Trades</div>
-        <div class="ind-d">Quoting, scheduling, compliance, client comms</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon">🌿</div>
-        <div class="ind-t">Agriculture & Primary</div>
-        <div class="ind-d">Export docs, market alerts, farm management</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon">🍽</div>
-        <div class="ind-t">Hospitality & Food</div>
-        <div class="ind-d">Reservations, reviews, rostering, menu AI</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon">🏥</div>
-        <div class="ind-t">Healthcare & Wellness</div>
-        <div class="ind-d">Appointments, patient comms, admin automation</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon">🏡</div>
-        <div class="ind-t">Real Estate</div>
-        <div class="ind-d">AI listings, viewings, market intel, lead nurture</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon">🛍</div>
-        <div class="ind-t">Retail & E-Commerce</div>
-        <div class="ind-d">AI sales, inventory prediction, email, returns</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon">⚖️</div>
-        <div class="ind-t">Legal & Professional</div>
-        <div class="ind-d">Document drafting, intake, research, billing</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon">🚛</div>
-        <div class="ind-t">Logistics & Transport</div>
-        <div class="ind-d">Route optimisation, dispatch, tracking, fleet AI</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon">🏄</div>
-        <div class="ind-t">Tourism & Adventure</div>
-        <div class="ind-d">24/7 bookings, multilingual, weather-aware</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon">🚗</div>
-        <div class="ind-t">Automotive</div>
-        <div class="ind-d">Test drives, trade-ins, service reminders, leads</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon">💻</div>
-        <div class="ind-t">Tech & Startups</div>
-        <div class="ind-d">Dev tools, onboarding AI, sales intelligence</div>
-      </div>
-      <div class="ind-card ind-card-any">
-        <div class="ind-icon">✨</div>
-        <div class="ind-t">Any Industry</div>
-        <div class="ind-d">If you have processes and customers, we have AI for you</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ─── BOOK ─── -->
 <section class="booking" id="book">
   <div class="sec">
@@ -761,7 +775,7 @@ footer{
       <div class="booking-left rv">
         <div class="eyebrow-light">Let's Have a Chat</div>
         <h2 class="sec-h">One conversation.<br><em>Total clarity.</em></h2>
-        <p class="booking-subtitle">Book a free 30-minute call with Omar. No pitch. No obligation. Just an honest conversation about what AI could do for your business and whether it's even worth pursuing right now.</p>
+        <p class="booking-subtitle">Pick a time that works for you. No pitch. No obligation. Just an honest conversation about what AI could do for your business and whether it's even worth pursuing right now.</p>
         <div class="what-you-get">
           <div class="wyg"><div class="wyg-check">✓</div><div><strong>We'll talk through your business</strong> and understand what you actually do day to day</div></div>
           <div class="wyg"><div class="wyg-check">✓</div><div><strong>You'll get real initial thoughts</strong> on where AI could make a difference</div></div>
@@ -789,70 +803,7 @@ footer{
   </div>
 </section>
 
-<!-- ─── HOW IT WORKS ─── -->
-<section class="how" id="how">
-  <div class="sec">
-    <div class="rv">
-      <div class="eyebrow-light">How It Works</div>
-      <h2 class="sec-h">From booking to <em>clarity</em><br>in four simple steps.</h2>
-    </div>
-    <div class="steps">
-      <div class="step rv">
-        <div class="step-num">1</div>
-        <div class="step-t">Book a free chat</div>
-        <div class="step-d">Fill in the form above with a few quick details. We'll get back to you within 24 hours with a Zoom link.</div>
-      </div>
-      <div class="step rv d1">
-        <div class="step-num">2</div>
-        <div class="step-t">We talk through your business</div>
-        <div class="step-d">A casual 30-minute conversation. What you do, how your team works, where your time goes. We'll share initial thoughts on where AI fits.</div>
-      </div>
-      <div class="step rv d2">
-        <div class="step-num">3</div>
-        <div class="step-t">Go deeper (if you want to)</div>
-        <div class="step-d">If AI looks like a good fit, you can book a paid AI Discovery Session. A structured 90-minute deep-dive with a written report.</div>
-      </div>
-      <div class="step rv d3">
-        <div class="step-num">4</div>
-        <div class="step-t">You get a clear AI roadmap</div>
-        <div class="step-d">Within 48 hours of the Discovery Session, you receive a written report: every opportunity, ranked by impact, with clear next steps.</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ─── OUTCOMES (PAID SESSION) ─── -->
-<section class="outcomes" id="outcomes">
-  <div class="sec">
-    <div class="rv">
-      <div class="eyebrow-light">What You Get From the AI Discovery Session</div>
-      <h2 class="sec-h">After the paid session, you'll know<br><em>exactly what to do next.</em></h2>
-    </div>
-    <div class="outcomes-grid">
-      <div class="oc rv">
-        <div class="oc-icon">🗺</div>
-        <div class="oc-t">A clear AI map of your business</div>
-        <div class="oc-d">Every workflow, task, and touchpoint reviewed. You'll understand where AI fits into your operation and where it doesn't need to.</div>
-      </div>
-      <div class="oc rv d1">
-        <div class="oc-icon">⚡</div>
-        <div class="oc-t">Your top 3 quick-win opportunities</div>
-        <div class="oc-d">The highest-ROI moves you can make in the next 30 days. Concrete, specific to your business, and achievable without a big tech budget.</div>
-      </div>
-      <div class="oc rv d2">
-        <div class="oc-icon">📋</div>
-        <div class="oc-t">A 12+ point AI opportunity list</div>
-        <div class="oc-d">Every AI application we identify for your business, written up clearly. A reference you can return to as you grow your AI capability over time.</div>
-      </div>
-      <div class="oc rv d3">
-        <div class="oc-icon">📄</div>
-        <div class="oc-t">A written report within 48 hours</div>
-        <div class="oc-d">Everything from the session distilled into a clear, actionable document. Share it with your team, your partner, or your accountant.</div>
-      </div>
-    </div>
-    <p class="outcomes-note rv d4">These outcomes are from the paid AI Discovery Session (NZ$350). The free intro chat gives you initial thoughts and helps you decide if it's worth going deeper.</p>
-  </div>
-</section>
 
 <!-- ─── ABOUT ─── -->
 <section class="about" id="about">
@@ -869,27 +820,19 @@ footer{
       </div>
       <div class="rv d1">
         <div class="eyebrow-light">About KiwiAI</div>
-        <h2 class="sec-h">This isn't a tech company.<br><em>It's a clarity service.</em></h2>
+        <h2 class="sec-h">Built on 15 years of<br><em>making tech make sense.</em></h2>
         <div class="about-creds">
           <div class="cred">15+ yrs blockchain & AI</div>
           <div class="cred">1,500+ projects assessed</div>
           <div class="cred">NZ-based, remote-first</div>
         </div>
-        <p class="about-text">I've been in AI and blockchain since before either was trendy. I've worked on global campaigns touching McDonald's, Ford, Vodafone, and SkyTV. I was the primary deal-router for a major capital firm, personally assessing over 1,500 projects across every industry you can think of.</p>
-        <p class="about-text">Before KiwiAI, I ran <strong>Block Consult</strong>, a Web3 boutique consultancy. My job there was the same thing I do now: take complex technology and translate it into business decisions that actually make sense.</p>
-        <p class="about-text"><strong>The best outcome from a session isn't that you hire me.</strong> It's that you leave with your head completely clear about what AI means for your business. That's what I'm optimising for.</p>
-        <p class="about-text">I'm based in Aotearoa, working with Kiwi businesses across every region. Remote-first. Straight-talking. No fluff.</p>
+        <p class="about-text">I've spent my career in the gap between emerging technology and real business. Global campaigns with McDonald's, Ford, Vodafone, and SkyTV. Primary deal-router for a major capital firm, personally assessing over 1,500 projects across every industry.</p>
+        <p class="about-text">Before KiwiAI, I ran <strong>Block Consult</strong>, a Web3 boutique consultancy. Same job, different technology: take something complex and translate it into business decisions that actually make sense.</p>
+        <p class="about-text">I work with a technical partner who builds every AI system we deliver. I focus on understanding your business and identifying the right opportunities. You get the benefit of both: someone who speaks your language and a team that can actually build it.</p>
+        <p class="about-text"><strong>The best outcome from a session isn't that you hire me.</strong> It's that you leave knowing exactly what AI means for your business, and exactly what to do about it.</p>
         <a href="#book" class="btn-pri" style="margin-top:1rem">Let's have a chat</a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ─── SOCIAL PROOF BAR ─── -->
-<section class="proof-bar">
-  <div class="proof-inner rv">
-    <div class="proof-text">Launching in 2026. Early conversations open now.</div>
-    <div class="proof-sub">We're talking to NZ businesses across 12+ industries. Remote-first, no jargon, no fluff. Book your free intro chat and be among the first.</div>
   </div>
 </section>
 
@@ -946,6 +889,7 @@ footer{
 <footer>
   <div class="f-logo">Kiwi<span>AI</span></div>
   <div class="f-links">
+    <a href="#cases">Our Work</a>
     <a href="#solution">Services</a>
     <a href="#about">About</a>
     <a href="#faq">FAQ</a>
