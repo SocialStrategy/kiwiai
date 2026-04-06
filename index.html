@@ -594,6 +594,7 @@ footer{
   nav{padding:0 1.5rem}
   .nav-links{display:none}
   .buckets{grid-template-columns:1fr}
+  .team-grid-resp{grid-template-columns:1fr !important}
   .offer-cards{grid-template-columns:1fr}
   .booking-inner{grid-template-columns:1fr;gap:3rem}
   .steps{grid-template-columns:1fr 1fr}.steps::before{display:none}
@@ -616,8 +617,10 @@ footer{
 
 <!-- ─── NAV ─── -->
 <nav id="nav">
-  <a class="nav-logo" href="#">Kiwi<span>AI</span> <em>New Zealand</em></a>
+  <a class="nav-logo" href="#"><img src="/kiwi-logo.png" alt="KiwiAI" style="height:36px"></a>
   <div class="nav-links">
+    <a href="#cases">Case Studies</a>
+    <a href="#how">How It Works</a>
     <a href="#cases">Our Work</a>
     <a href="#solution">Services</a>
     <a href="#about">About</a>
@@ -831,6 +834,50 @@ footer{
         <p class="about-text">I work with a technical partner who builds every AI system we deliver. I focus on understanding your business and identifying the right opportunities. You get the benefit of both: someone who speaks your language and a team that can actually build it.</p>
         <p class="about-text"><strong>The best outcome from a session isn't that you hire me.</strong> It's that you leave knowing exactly what AI means for your business, and exactly what to do about it.</p>
         <a href="#book" class="btn-pri" style="margin-top:1rem">Let's have a chat</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TEAM ─── -->
+<section id="team" style="background:var(--paper2);padding:5rem 0">
+  <div class="sec">
+    <div class="rv">
+      <div class="eyebrow-light">The Team</div>
+      <h2 class="sec-h">The people behind<br><em>the clarity.</em></h2>
+      <p style="font-size:1rem;line-height:1.75;color:var(--mid);max-width:640px;margin:0 0 3rem">
+        KiwiAI isn't a one-person show. Behind every engagement is a tight-knit team of AI specialists
+        who live inside the tools, track the landscape daily, and build the solutions that we recommend.
+        You get the strategy and the execution, under one roof.
+      </p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem" class="team-grid-resp">
+      <div style="background:var(--w);border-radius:var(--r);padding:1.75rem;border-left:3px solid var(--kiwi)">
+        <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--kiwi);margin-bottom:.6rem">Founder &amp; Lead Advisor</p>
+        <p style="font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--ink);margin-bottom:.75rem">Omar</p>
+        <p style="font-size:.875rem;line-height:1.7;color:var(--mid)">15+ years bridging emerging technology and real business decisions. Former deal-router at a major capital firm, personally assessing over 1,500 projects. Omar leads every client engagement, translating complexity into action.</p>
+      </div>
+      <div style="background:var(--w);border-radius:var(--r);padding:1.75rem;border-left:3px solid var(--kiwi)">
+        <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--kiwi);margin-bottom:.6rem">Technical Co-Lead &amp; AI Build Partner</p>
+        <p style="font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--ink);margin-bottom:.75rem">Pete</p>
+        <p style="font-size:.875rem;line-height:1.7;color:var(--mid)">15 years in software engineering and systems architecture. Specialises in enterprise AI workflows, autonomous agent systems, and production infrastructure. Pete builds and operates every AI system KiwiAI delivers.</p>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem">
+          <span style="background:var(--paper2);border:1px solid var(--border);border-radius:20px;padding:.3rem .85rem;font-size:.75rem;color:var(--ink)">Solar &amp; Energy</span>
+          <span style="background:var(--paper2);border:1px solid var(--border);border-radius:20px;padding:.3rem .85rem;font-size:.75rem;color:var(--ink)">Legal &amp; Compliance</span>
+          <span style="background:var(--paper2);border:1px solid var(--border);border-radius:20px;padding:.3rem .85rem;font-size:.75rem;color:var(--ink)">SaaS &amp; Fintech</span>
+        </div>
+      </div>
+    </div>
+    <div style="background:var(--ink);border-radius:var(--r);padding:2rem;border-left:3px solid var(--kiwi2);color:var(--paper)">
+      <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--kiwi2);margin-bottom:.6rem">The AI Intelligence Layer</p>
+      <p style="font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--paper);margin-bottom:.75rem">Our extended specialist team</p>
+      <p style="font-size:.875rem;line-height:1.7;color:var(--dim)">We've built and curated a team of AI specialists whose full-time focus is the frontier. New models, new tools, new deployment patterns. They are embedded in the communities, testing environments, and early-access programmes where AI actually moves. This means every recommendation we make is based on what's working <em>right now</em>, not what worked six months ago.</p>
+      <p style="font-size:.875rem;line-height:1.7;color:var(--dim);margin-top:.75rem">To date, this team has implemented AI solutions across 6+ industries and built systems that have generated over 200+ hours saved per week in operational overhead for the businesses they work with.</p>
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem">
+        <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:.3rem .85rem;font-size:.75rem;color:var(--paper3)">Always-on model monitoring</span>
+        <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:.3rem .85rem;font-size:.75rem;color:var(--paper3)">Tool stack evaluation</span>
+        <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:.3rem .85rem;font-size:.75rem;color:var(--paper3)">Custom AI build &amp; deployment</span>
+        <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:.3rem .85rem;font-size:.75rem;color:var(--paper3)">Prompt engineering &amp; workflow design</span>
       </div>
     </div>
   </div>
