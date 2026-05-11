@@ -7,7 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        'local-energy': resolve(__dirname, 'local-energy-pitch.html')
+        'local-energy': resolve(__dirname, 'local-energy.html')
       }
     }
   }
