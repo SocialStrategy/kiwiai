@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KiwiAI x Local Energy — Scope of Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #fafaf9;
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 40px 80px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1D9E75;
+    margin-bottom: 32px;
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    max-width: 620px;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: #1D9E75;
+  }
+
+  .lede {
+    font-size: 17px;
+    color: #4a4a4a;
+    line-height: 1.7;
+    margin-bottom: 48px;
+    max-width: 600px;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #e8e8e5;
+    margin: 0 0 48px;
+  }
+
+  .section {
+    margin-bottom: 48px;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #1a1a1a;
+    margin-bottom: 14px;
+  }
+
+  .section-body {
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  .section-body + .section-body {
+    margin-top: 16px;
+  }
+
+  .section-body strong {
+    color: #1a1a1a;
+    font-weight: 500;
+  }
+
+  .proof-box {
+    background: #f4f4f1;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin: 20px 0;
+  }
+
+  .proof-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #9a9a97;
+    margin-bottom: 10px;
+  }
+
+  .proof-box p {
+    font-size: 15px;
+    color: #3a3a3a;
+    line-height: 1.7;
+  }
+
+  .proof-box p strong {
+    color: #1a1a1a;
+    font-weight: 500;
+  }
+
+  .result {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #ddddd8;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1D9E75;
+  }
+
+  /* Funnel number badge */
+  .funnel-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #e1f5ee;
+    color: #1D9E75;
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+
+  .funnel-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+  }
+
+  .funnel-subtitle {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1D9E75;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+  }
+
+  .subsection {
+    margin-top: 20px;
+  }
+
+  .subsection-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+
+  .detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .detail-list li {
+    font-size: 15px;
+    color: #4a4a4a;
+    line-height: 1.65;
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+
+  .detail-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1D9E75;
+  }
+
+  .infra-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .infra-card {
+    background: #f4f4f1;
+    border-radius: 10px;
+    padding: 20px 22px;
+  }
+
+  .infra-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+  }
+
+  .infra-card p {
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 1.6;
+  }
+
+  .pill {
+    display: inline-block;
+    font-size: 13px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid #ddddd8;
+    color: #4a4a4a;
+    margin: 0 4px 6px 0;
+  }
+
+  .pill-green {
+    background: #e1f5ee;
+    color: #0f6e56;
+    border-color: #9fe1cb;
+  }
+
+  .team-block {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 12px;
+  }
+
+  .team-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #e1f5ee;
+    color: #1D9E75;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'DM Serif Display', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .team-content {
+    flex: 1;
+  }
+
+  .team-content p {
+    font-size: 15px;
+    color: #4a4a4a;
+    line-height: 1.65;
+  }
+
+  .team-content p strong {
+    color: #1a1a1a;
+    font-weight: 500;
+  }
+
+  .cta {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 32px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 48px 0 32px;
+  }
+
+  .cta h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.3;
+  }
+
+  .cta-sub {
+    font-size: 14px;
+    color: #9a9a97;
+    margin-top: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: #1a1a1a;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+
+  .cta-btn:hover {
+    background: #e8e8e5;
+  }
+
+  .cta-btn svg {
+    width: 15px;
+    height: 15px;
+    stroke: #1a1a1a;
+    fill: none;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #e8e8e5;
+    font-size: 13px;
+    color: #9a9a97;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer a {
+    color: #1D9E75;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { padding: 40px 32px 40px; }
+    .cta-btn { border: 1px solid #1a1a1a; }
+  }
+
+  @media (max-width: 500px) {
+    .page { padding: 40px 24px 60px; }
+    h1 { font-size: 30px; }
+    .cta { padding: 24px 24px; }
+    .cta-btn { width: 100%; justify-content: center; }
+    .infra-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- TAG -->
+  <div class="tag">KiwiAI &nbsp;&#183;&nbsp; Scope of Work for Local Energy</div>
+
+  <!-- HEADLINE -->
+  <h1>A two-sided marketplace needs both sides moving at once.<br/><em>We build the engines that make that happen.</em></h1>
+
+  <p class="lede">
+    Local Energy's model works when roof owners sign up and power customers switch over in the same suburbs, at the same time. That coordination problem is the bottleneck. This document outlines three AI-driven lead generation engines designed to solve it: one for commercial roof owners, one for the PowerHouse residential programme, and one for the broader retail market.
+  </p>
+
+  <hr class="divider" />
+
+  <!-- PROOF -->
+  <div class="section">
+    <h2 class="section-title">We've built this kind of infrastructure before.</h2>
+    <p class="section-body">
+      A solar installation company in Queensland was running every job through a chain of manual steps: grid applications, form submissions, CRM updates, compliance filings. Each new installation required someone to log into five different systems and push the same data through each one by hand. The bottleneck wasn't the installs. It was the admin holding up the pipeline.
+    </p>
+
+    <div class="proof-box">
+      <div class="proof-label">What we built</div>
+      <p>
+        An automated pipeline that pulls job data from the CRM, submits grid applications to the energy provider's portal, fills compliance forms, and advances each job through its stages without human intervention. The system handles field validation, error recovery, and sequential dependencies across multiple external platforms.
+      </p>
+      <div class="result">Outcome: 15+ hours per week of manual admin eliminated. Pipeline now runs on autopilot.</div>
+    </div>
+
+    <p class="section-body">
+      The same pattern applies to what Local Energy needs. Prospecting data from LINZ, council records, and satellite imagery. Outreach sequences personalised by building type. Lead scoring that updates as prospects engage. CRM pipelines that surface the right lead at the right time. Different data, same principle: build the system once, let it run continuously.
+    </p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- OVERVIEW -->
+  <div class="section">
+    <h2 class="section-title">Three engines, one marketplace.</h2>
+    <p class="section-body">
+      Each funnel targets a different segment of Local Energy's marketplace. They run independently but feed into a unified lead scoring and CRM system that gives the sales team a single daily priority list across all three.
+    </p>
+  </div>
+
+  <!-- FUNNEL 1 -->
+  <div class="section">
+    <div class="funnel-num">1</div>
+    <div class="funnel-title">Commercial Roof Owners and Businesses</div>
+    <div class="funnel-subtitle">Supply side: large rooftops</div>
+
+    <p class="section-body">
+      The first engine identifies and ranks commercial properties with high solar potential, then runs personalised outreach to building owners.
+    </p>
+
+    <div class="subsection">
+      <div class="subsection-title">Prospecting and scoring</div>
+      <ul class="detail-list">
+        <li>Aggregate publicly available data from LINZ property records, council GIS systems, Google Maps satellite imagery, and Companies Office filings</li>
+        <li>Build a ranked database of target properties scored on rooftop size, orientation, building type, ownership structure, proximity to residential density, and estimated generation potential</li>
+        <li>Priority regions defined by Local Energy's rollout plan</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Outreach and conversion</div>
+      <ul class="detail-list">
+        <li>Personalised email and LinkedIn sequences tailored by building type: warehouses, churches, sports clubs, and community facilities each carry a different conversation around passive income, community contribution, and energy independence</li>
+        <li>Automated follow-up sequences triggered by engagement behaviour</li>
+        <li>Dedicated CRM pipeline with real-time lead scoring and task prompts for the sales team</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- FUNNEL 2 -->
+  <div class="section">
+    <div class="funnel-num">2</div>
+    <div class="funnel-title">The PowerHouse</div>
+    <div class="funnel-subtitle">Both sides: residential roof owners + power customers</div>
+
+    <p class="section-body">
+      The PowerHouse programme lets homeowners rent their roof to Local Energy, receive cheaper power, and earn future rebates. This funnel is two engines in one: sourcing roofs (supply) and acquiring customers (demand) in the same suburbs simultaneously.
+    </p>
+
+    <div class="subsection">
+      <div class="subsection-title">Roof sourcing (supply side)</div>
+      <ul class="detail-list">
+        <li>Residential property prospecting engine targeting homeowners in high-solar suburbs near existing Local Energy infrastructure</li>
+        <li>Prospect lists built from property data, enriched with dwelling type and ownership indicators, segmented by suburb for hyper-local campaigns</li>
+        <li>Automated email and social campaigns focused on the passive income and cheaper power narrative</li>
+        <li>Drives homeowners to a dedicated PowerHouse landing page or savings calculator</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Customer acquisition (demand side)</div>
+      <ul class="detail-list">
+        <li>Lead generation campaigns targeting residential energy customers in Local Energy's active and planned service areas</li>
+        <li>Suburb-level content and social advertising copy tailored to community and cost-saving messaging</li>
+        <li>AI-powered savings estimator as the primary lead capture tool: prospect inputs their monthly power bill and receives a projected savings figure</li>
+        <li>Automated nurture sequence educating prospects on the PowerHouse model and driving toward sign-up</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Built-in referral growth</div>
+      <ul class="detail-list">
+        <li>Once a customer is onboarded, AI-assisted referral prompts trigger to expand reach within the same suburb organically</li>
+        <li>The referral loop compounds: each new customer becomes a distribution channel for their neighbourhood</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- FUNNEL 3 -->
+  <div class="section">
+    <div class="funnel-num">3</div>
+    <div class="funnel-title">Retail Power Customers</div>
+    <div class="funnel-subtitle">Demand side: broader NZ market</div>
+
+    <p class="section-body">
+      A lower-touch funnel capturing the wider market of residential and small business customers looking to switch to cheaper, greener power. This engine runs largely on automation with minimal human intervention.
+    </p>
+
+    <ul class="detail-list">
+      <li>Automated content generation and distribution targeting power-switching intent</li>
+      <li>Social monitoring for cost-of-living frustration signals and switching triggers</li>
+      <li>Lightweight nurture sequence introducing Local Energy's value proposition</li>
+      <li>Traffic driven toward the sign-up CTA on the existing Local Energy website</li>
+      <li>Low cost to maintain, consistent flow of general enquiries</li>
+    </ul>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- INFRASTRUCTURE -->
+  <div class="section">
+    <h2 class="section-title">The infrastructure underneath.</h2>
+    <p class="section-body">
+      All three funnels sit on a shared AI platform that handles scoring, reporting, and content generation across every segment.
+    </p>
+
+    <div class="infra-grid">
+      <div class="infra-card">
+        <h4>Unified lead scoring</h4>
+        <p>Continuous ranking across all three funnels. One daily priority list for the sales team, not three.</p>
+      </div>
+      <div class="infra-card">
+        <h4>CRM integration</h4>
+        <p>Every prospect, every engagement signal, and every stage transition surfaced in a single view.</p>
+      </div>
+      <div class="infra-card">
+        <h4>Performance dashboards</h4>
+        <p>Funnel performance by region and segment, updated automatically. No manual reporting.</p>
+      </div>
+      <div class="infra-card">
+        <h4>Content engine</h4>
+        <p>AI-generated email sequences, social posts, and outreach copy. Refreshed continuously to avoid fatigue.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- HOW WE WORK -->
+  <div class="section">
+    <h2 class="section-title">How we work.</h2>
+
+    <div class="team-block">
+      <div class="team-avatar">O</div>
+      <div class="team-content">
+        <p>
+          <strong>Omar</strong> leads every engagement. He learns your business, maps where the highest-value opportunities sit, and defines the build order. He works with a dedicated technical team who design and deploy the systems. No account managers, no handoffs, no layers between you and the people doing the work. One person who understands your business and a team that can ship.
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top:24px; display:flex; flex-wrap:wrap; gap:6px;">
+      <span class="pill pill-green">AI Strategy</span>
+      <span class="pill pill-green">Lead Generation Systems</span>
+      <span class="pill pill-green">CRM Automation</span>
+      <span class="pill pill-green">Data Engineering</span>
+      <span class="pill pill-green">Content Generation</span>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- FRAMING -->
+  <div class="section">
+    <h2 class="section-title">What this document is.</h2>
+    <p class="section-body" style="margin-bottom:24px;">
+      This is a scope outline, not a fixed proposal. The detail in each funnel will sharpen once Omar sits down with the Local Energy team and walks through the current sales process, the CRM setup, the rollout timeline, and where the real friction sits today. Some of these engines will be more urgent than others. The build order should reflect that.
+    </p>
+    <p class="section-body">
+      The next step is a working session. Bring whoever owns the sales process and the rollout plan. Omar will map what exists, identify the first engine to build, and define a concrete timeline for delivery. No pitch. No presentation. Just the work.
+    </p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div>
+      <h3>Book the working session.</h3>
+      <div class="cta-sub">60 minutes with Omar. Let's get into the detail.</div>
+    </div>
+    <a class="cta-btn" href="https://kiwi-ai.co.nz/#book" target="_blank">
+      Book your session
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>KiwiAI &nbsp;&#183;&nbsp; 2026</span>
+    <span>
+      <a href="https://kiwi-ai.co.nz" target="_blank">kiwi-ai.co.nz</a>
+      &nbsp;&#183;&nbsp;
+      <a href="mailto:hello@kiwi-ai.co.nz">hello@kiwi-ai.co.nz</a>
+    </span>
+  </div>
+
+</div>
+</body>
+</html>
